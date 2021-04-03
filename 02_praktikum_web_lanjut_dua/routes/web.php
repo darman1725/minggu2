@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*Route::get('/', 'App\Http\Controllers\PageController@ucapan');
+
+Route::get('/data', 'App\Http\Controllers\PageController@about');
+
+Route::get('/articles/{id}', 'App\Http\Controllers\PageController@articles');*/
+
+Route::get('/', 'App\Http\Controllers\HomeController@ucapan');
+
+Route::get('/mahasiswa', 'App\Http\Controllers\AboutController@about');
+
+Route::get('/articles/{id}', 'App\Http\Controllers\ArticleController@articles');
+
